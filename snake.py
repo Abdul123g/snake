@@ -45,8 +45,8 @@ class Snake:
         cell.goto(self.snake_cells[-1].pos())
         self.snake_cells.append(cell)
         
-def tail_collision(self):
-    snake_positions = set(cell.pos() for cell in self.snake_cells[1:])
-    if self.head.pos() in snake_positions:
-        return True
-    return False
+    def tail_collision(self):
+        snake_positions = [cell.pos() for cell in self.snake_cells[1:]]
+        if (self.head.pos()) in snake_positions:
+            return True
+        
